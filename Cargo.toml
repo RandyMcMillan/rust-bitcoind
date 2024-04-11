@@ -53,3 +53,7 @@ anyhow = "1.0.66"
 [package.metadata.docs.rs]
 features = ["download", "doc"]
 rustdoc-args = ["--cfg", "docsrs"]
+
+[[bin]]
+name = "plebnetd"
+path = "src/bin/plebnetd.rs"
