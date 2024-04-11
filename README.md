@@ -19,6 +19,12 @@ for bitcoin core 25.1, starting a regtest node is as simple as that:
 }
 ```
 
+### Example command
+
+```sh
+cargo b --features download --features 26_0
+```
+
 The build script will automatically download the bitcoin core version 25.1 from [bitcoin core](https://bitcoincore.org),
 verify the hashes and place it in the build directory for this crate. If you wish to download from an 
 alternate location, for example locally for CI, use the `BITCOIND_DOWNLOAD_ENDPOINT` env var.
@@ -71,7 +77,7 @@ Thanks to these features every `#[test]` could easily run isolated with its own 
 To build docs:
 
 ```sh
-RUSTDOCFLAGS="--cfg docsrs" cargo +nightly doc --features download,doc --open
+RUSTDOCFLAGS="--cfg docsrs" cargo +nightly doc --features download --features 26_0,doc --open
 ```
 
 ## MSRV
