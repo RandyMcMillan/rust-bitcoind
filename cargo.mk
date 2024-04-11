@@ -24,8 +24,7 @@ cargo-docs:### 	cargo-docs
 cargo-b:cargo-build### 	cargo b
 cargo-build:### 	cargo build
 ## 	cargo-build q=true
-	@. $(HOME)/.cargo/env
-	@RUST_BACKTRACE=all cargo b $(QUIET)
+	@. $(HOME)/.cargo/env && @RUST_BACKTRACE=all cargo b    $(QUIET) --features download --features 26_1
 cargo-i:cargo-install
 cargo-install:### 	cargo install --path .
 	#@. $(HOME)/.cargo/env
@@ -34,7 +33,7 @@ cargo-br:cargo-build-release### 	cargo-br
 ## 	cargo-br q=true
 cargo-build-release:### 	cargo-build-release
 ## 	cargo-build-release q=true
-	@. $(HOME)/.cargo/env && cargo b --release $(QUIET)
+	@. $(HOME)/.cargo/env &&                     cargo b -r --features download --features 26_1
 cargo-check:### 	cargo-check
 	@. $(HOME)/.cargo/env && cargo c
 cargo-nightly-fmt--all:### 	 cargo-nightly-fmt--all
