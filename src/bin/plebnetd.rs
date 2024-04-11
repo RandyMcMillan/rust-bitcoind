@@ -1,3 +1,4 @@
+use bitcoind;
 fn main() {
 
 // the download feature is enabled whenever a specific version is enabled, for example `25_1` or `24_0_1`
